@@ -63,12 +63,6 @@ let strip: neopixel.Strip = null
 strip.showRainbow(1, 360)
 ```
   
-``||neopixel.clear||`` - выключает все зажженные светодиоды
-```block
-let strip: neopixel.Strip = null
-strip.clear()
-```
-  
 
 
 ## Step 4 @showHint
@@ -91,14 +85,6 @@ strip.showColor(neopixel.colors(NeoPixelColors.Red))
 let strip: neopixel.Strip = null
 strip.showRainbow(1, 360)
 ```
-```hint
-  
-Выключить
-```
-```block
-let strip: neopixel.Strip = null
-strip.clear()
-```
 ## Step 5 @showHint
 ### Пример 1: Смена цвета
 В этом примере показывается, как управлять цветом подсветки с помощью блока ``||neopixel.show color||``.
@@ -114,13 +100,13 @@ basic.forever(function () {
 
 ## Step 6 @showHint
 ### Пример 2: Включить - выключить
-Этот пример показывает, как выключить подсветку с помощью блока ``||neopixel.clear||``.
+Этот пример показывает, как выключить подсветку с помощью блока ``||neopixel.show color||``.
 ```blocks
 input.onButtonPressed(Button.A, function () {
     strip.showColor(neopixel.colors(NeoPixelColors.White))
 })
 input.onButtonPressed(Button.B, function () {
-    strip.clear()
+    strip.showColor(neopixel.colors(NeoPixelColors.Black))
 })
 let strip: neopixel.Strip = null
 strip = neopixel.create(DigitalPin.P0, 10, NeoPixelMode.RGB)
